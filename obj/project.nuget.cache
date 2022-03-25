@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "VuN26SFRjAV6zwsI2EOHhpEzpDVrKFZW1T6ciTdTK9LDbNdgTNbf6m2uWE5bcms9Hgn0e/DMVDnxZfZyW9S9Wg==",
+  "dgSpecHash": "My/SWrA93MtyXLcUwtsHXY9AkM5164BxhXVpxRcW6zfsLXAXrbFPVALeJLVCY+eiQzGxBlyle4ks3GkwCiBLWw==",
   "success": true,
   "projectFilePath": "/Users/alexbolog/Documents/work/projects/AgeOfZamolxes/backend-aoz/backend-aoz.csproj",
   "expectedPackageFiles": [
@@ -10,10 +10,7 @@
     "/Users/alexbolog/.nuget/packages/swashbuckle.aspnetcore/6.2.3/swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
     "/Users/alexbolog/.nuget/packages/swashbuckle.aspnetcore.swagger/6.2.3/swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
     "/Users/alexbolog/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.2.3/swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
-    "/Users/alexbolog/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.2.3/swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512",
-    "/Users/alexbolog/.nuget/packages/microsoft.netcore.app.runtime.linux-x64/6.0.0/microsoft.netcore.app.runtime.linux-x64.6.0.0.nupkg.sha512",
-    "/Users/alexbolog/.nuget/packages/microsoft.aspnetcore.app.runtime.linux-x64/6.0.0/microsoft.aspnetcore.app.runtime.linux-x64.6.0.0.nupkg.sha512",
-    "/Users/alexbolog/.nuget/packages/microsoft.netcore.app.host.linux-x64/6.0.0/microsoft.netcore.app.host.linux-x64.6.0.0.nupkg.sha512"
+    "/Users/alexbolog/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.2.3/swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
   ],
   "logs": []
 }

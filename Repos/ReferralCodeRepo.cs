@@ -9,6 +9,8 @@ public interface IReferralCodeRepo
     void AddReferralData(ReferralData referralData);
     Task<ReferralData?> GetReferralDataByCodeAsync(string referralCode);
     Task<ReferralData?> GetReferralDataByErdAsync(string erdAddress);
+
+    Task<bool> ExistingCodeAsync(string code);
 }
 
 public class FileReferralCodeRepo : BaseFileRepo, IReferralCodeRepo
@@ -39,6 +41,11 @@ public class FileReferralCodeRepo : BaseFileRepo, IReferralCodeRepo
     public async Task<ReferralData?> GetReferralDataByErdAsync(string erdAddress)
     {
         return (await GetAllDataAsync())?.FirstOrDefault(d => d.erdAddress == erdAddress);
+    }
+
+    public async Task<bool> ExistingCodeAsync(string code)
+    {
+        return (await GetAllDataAsync()).Any(d => d.referralCode == code);
     }
 
     private async Task<IEnumerable<ReferralData>> FetchAllDataAsync()

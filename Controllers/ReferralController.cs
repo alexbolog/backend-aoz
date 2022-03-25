@@ -33,7 +33,7 @@ public class ReferralController : ControllerBase
         {
             return existingData.referralCode;
         }
-        var data = GenerateNewData(erdAddress);
+        var data = await GenerateNewDataAsync(erdAddress);
         codeRepo.AddReferralData(data);
 
         return data.referralCode;
@@ -45,11 +45,17 @@ public class ReferralController : ControllerBase
         return (await codeRepo.GetReferralDataByCodeAsync(code))?.erdAddress ?? string.Empty;
     }
 
-    private ReferralData GenerateNewData(string erdAddress) => new ReferralData(erdAddress, RandomString(10));
-    public static string RandomString(int length)
+    // private ReferralData GenerateNewData(string erdAddress) => new ReferralData(erdAddress, RandomString(10));
+    private async Task<ReferralData> GenerateNewDataAsync(string erdAddress) => new ReferralData(erdAddress, await RandomString(10));
+    public async Task<string> RandomString(int length)
     {
         const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-        return new string(Enumerable.Repeat(chars, length)
+        var code = "";
+        do
+        {
+            code = new string(Enumerable.Repeat(chars, length)
             .Select(s => s[random.Next(s.Length)]).ToArray());
+        } while (await codeRepo.ExistingCodeAsync(code));
+        return code;
     }
 }
